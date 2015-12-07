@@ -16,12 +16,12 @@ then
 	curl -s http://whatismyip.akamai.com > currentip
 	# wget -qO- http://ipecho.net/plain
 	# wget -qO- http://ipecho.net/plain > currentip
-	date > lastrun
-	echo "Not Same" >> lastrun
+	date > /tmp/lastrun
+	echo "Not Same" >> /tmp/lastrun
 else
 	echo "Same"
-	date > lastrun
-	echo "Same" >> lastrun
+	date > /tmp/lastrun
+	echo "Same" >> /tmp/lastrun
 fi
 
 rm -fr update?hostname*
